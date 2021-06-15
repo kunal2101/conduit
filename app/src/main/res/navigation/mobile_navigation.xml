@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.kk.conduit.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="com.kk.conduit.ui.feed.GlobalFeedFragment"
+        android:label="@string/menu_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_nav_feed_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:popUpTo="@id/nav_feed" />
+
+        <argument android:name="@string/arg_articel_id"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_feed"
+        android:name="com.kk.conduit.ui.feed.MyFeedFragment"
+        android:label="@string/menu_my_feed"
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_nav_my_feed_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:popUpTo="@id/nav_my_feed" />
+        <argument android:name="@string/arg_articel_id"
+            app:argType="string"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.kk.conduit.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.kk.conduit.ui.auth.AuthFragment"
+        android:label="@string/menu_aut"
+        tools:layout="@layout/fragment_feed" />
+    <fragment
+        android:id="@+id/nav_signup"
+        android:name="com.kk.conduit.ui.auth.SignUpFragment"
+        android:label="@string/menu_feed"
+        tools:layout="@layout/fragment_feed" />
+
+    <fragment
+        android:id="@+id/nav_signin"
+        android:name="com.kk.conduit.ui.auth.SignInFragment"
+        android:label="@string/menu_feed"
+        tools:layout="@layout/fragment_feed" />
+
+
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.kk.conduit.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.kk.conduit.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.kk.conduit.MainActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.kk.conduit.ui.articles.ArticleFragment"
+        android:label="ArticleFragment" />
+</navigation>

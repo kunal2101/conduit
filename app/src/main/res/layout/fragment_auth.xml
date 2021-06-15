@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/nav_auth_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_auth"
+        app:defaultNavHost="true"/>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/auth_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/auth_tab_login"
+            android:layout_width="wrap_content"
+            android:icon="@drawable/ic_menu_signin_"
+            android:layout_height="wrap_content"
+            android:text="@string/login" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/auth_tab_signup"
+            android:icon="@drawable/ic_menu_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signup" />
+
+    </com.google.android.material.tabs.TabLayout>
+</FrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_menu_feed"
+            android:title="@string/menu_feed" />
+
+        <item
+            android:id="@+id/nav_auth"
+            android:icon="@drawable/ic_menu_securoty"
+            android:title="@string/menu_aut" />
+
+        <item
+            android:id="@+id/nav_signin"
+            android:icon="@drawable/ic_menu_signin_"
+            android:title="@string/menu_signin" />
+        <item
+            android:id="@+id/nav_signup"
+            android:icon="@drawable/ic_menu_signup"
+            android:title="@string/menu_signup" />
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+    </group>
+</menu>
